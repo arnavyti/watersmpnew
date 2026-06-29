@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Water Community</title>
+<style>
+body{font-family:Arial,sans-serif;background:#0b1220;color:#fff;margin:0}
+header{padding:60px 20px;text-align:center;background:linear-gradient(135deg,#0ea5e9,#1e3a8a)}
+.btn{display:inline-block;padding:12px 22px;background:#0ea5e9;color:#fff;text-decoration:none;border-radius:8px;margin:8px}
+section{max-width:900px;margin:30px auto;padding:20px}
+.card{background:#182235;padding:16px;border-radius:10px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+footer{text-align:center;padding:25px;color:#bbb}
+</style></head><body>
+<header>
+<h1>🌊 Water Community</h1>
+<p>Launching Soon • Join our Discord</p>
+<a class="btn" href="https://discord.gg/JdrdgJUUKZ" target="_blank">Join Discord</a>
+<h2 id="cd"></h2>
+</header>
+<section>
+<h2>Pre-Order Ranks</h2>
+<div class="grid">
+<div class="card"><h3>💧 Water Rank</h3><p>₹150/month</p><a class="btn" href="https://discord.gg/JdrdgJUUKZ">Buy Now</a></div>
+<div class="card"><h3>⚔️ Immortal</h3><p>₹100/month</p><a class="btn" href="https://discord.gg/JdrdgJUUKZ">Buy Now</a></div>
+<div class="card"><h3>☠️ Deadliest</h3><p>₹80/month</p><a class="btn" href="https://discord.gg/JdrdgJUUKZ">Buy Now</a></div>
+<div class="card"><h3>✨ Mythic</h3><p>₹60/month</p><a class="btn" href="https://discord.gg/JdrdgJUUKZ">Buy Now</a></div>
+<div class="card"><h3>🛡️ Elite</h3><p>₹40/month</p><a class="btn" href="https://discord.gg/JdrdgJUUKZ">Buy Now</a></div>
+</div>
+<p><b>Coupon:</b> WATER10 (10% OFF before launch)</p>
+</section>
+<footer>© 2026 Water Community</footer>
+<script>
+const end=new Date(Date.now()+7*24*60*60*1000);
+function tick(){let d=end-new Date();if(d<0){cd.textContent="🎉 Launched!";return;}
+let days=Math.floor(d/86400000),hrs=Math.floor(d%86400000/3600000),min=Math.floor(d%3600000/60000),sec=Math.floor(d%60000/1000);
+document.getElementById('cd').textContent=`Launch in ${days}d ${hrs}h ${min}m ${sec}s`;}
+tick();setInterval(tick,1000);
+</script>
+</body></html>
